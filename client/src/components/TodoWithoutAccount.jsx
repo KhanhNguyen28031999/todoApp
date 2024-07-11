@@ -308,7 +308,7 @@ const TodoWithoutAccount = ({ theme, toggleTheme }) => {
                                                             /></Col>
                                                     </Row>
                                                     <Row className='mb-3'>
-                                                        <label>Est Pomodoros</label>
+                                                        <label>Thời gian</label>
                                                         <Col className='col-8'>
                                                             <input
                                                                 type="text"
