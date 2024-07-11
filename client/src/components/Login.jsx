@@ -46,7 +46,7 @@ const Login = () => {
     var data = new URLSearchParams();
     data.append("username", username);
     data.append("userpassword", password);
-    fetch("http://localhost:3000/user/login?" + data, {
+    fetch("http://localhost:3001/user/login?" + data, {
       method: "GET",
     })
       .then((res) => res.json())

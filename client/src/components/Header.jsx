@@ -85,14 +85,14 @@ const Header = ({ theme, toggleTheme }) => {
                         <Nav className="me-auto" >
                             <Nav.Link href="/"><span id={theme}><b>Nhóm 2</b></span></Nav.Link>
                             <Nav.Link href={localStorage.getItem('apitoken') ? "/todo_1_account" : "/todo_0_account"}><span id={theme}><b>Task</b></span></Nav.Link>
-                            <Nav.Link href={localStorage.getItem('apitoken') ? "/report" : "/login"}><span id={theme}><b>Report</b></span></Nav.Link>
+                            {/* <Nav.Link href={localStorage.getItem('apitoken') ? "/report" : "/login"}><span id={theme}><b>Report</b></span></Nav.Link>
                             <NavDropdown title={<box-icon name='user' type='solid' color="#ffffff" ></box-icon>} id="basic-nav-dropdown">
                                 <NavDropdown.Item onClick={() => (
                                     localStorage.getItem('apitoken') ? handleShow() : window.location.replace("/login")
                                 )}>Tài khoản</NavDropdown.Item >
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item onClick={logout}>Đăng xuất</NavDropdown.Item>
-                            </NavDropdown>
+                            </NavDropdown> */}
                         </Nav>
 
                         <div className="form-check form-switch">

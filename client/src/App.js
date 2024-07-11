@@ -12,8 +12,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Loginpage />} />
-        <Route path="/register" element={<Registerpage />} />
+        {/* <Route path="/login" element={<Loginpage />} />
+        <Route path="/register" element={<Registerpage />} /> */}
         <Route path="/todo_0_account" element={<TodopageWithoutAccount />} />
         <Route path="/todo_1_account" element={<TodopageWithAccount />} />
         <Route path="/report" element={<Reportpage />} />

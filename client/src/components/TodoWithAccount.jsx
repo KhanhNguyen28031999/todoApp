@@ -37,7 +37,7 @@ const TodoWithAccount = ({ theme, toggleTheme }) => {
     const handleClick = () => setLoading(true);
 
     const getTodo = () => {
-        fetch('http://localhost:3000/task?apitoken=' + localStorage.getItem('apitoken'))
+        fetch('http://localhost:3001/task?apitoken=' + localStorage.getItem('apitoken'))
             .then((res) => res.json()).then((res) => {
                 setTodo(res.result);
             });
@@ -62,7 +62,7 @@ const TodoWithAccount = ({ theme, toggleTheme }) => {
             data.append('apitoken', localStorage.getItem('apitoken'));
             data.append('id', id);
             data.append('taskname', item1);
-            fetch('http://localhost:3000/task/edit?' + data, {
+            fetch('http://localhost:3001/task/edit?' + data, {
                 method: 'POST',
             }).then((res) => res.json()).then((res) => {
                 if (res.check === true) {
@@ -138,7 +138,7 @@ const TodoWithAccount = ({ theme, toggleTheme }) => {
         data.append('taskname', item);
         data.append('tasktype', type);
         data.append('estPomodoro', number);
-        fetch('http://localhost:3000/task/add?' + data, {
+        fetch('http://localhost:3001/task/add?' + data, {
             method: 'POST'
         }).then((res) => res.json()).then((res) => {
             if (res.check === true) {
@@ -164,7 +164,7 @@ const TodoWithAccount = ({ theme, toggleTheme }) => {
                 var data = new URLSearchParams();
                 data.append('apitoken', localStorage.getItem('apitoken'));
                 data.append('id', id);
-                fetch('http://localhost:3000/task/delete?' + data, {
+                fetch('http://localhost:3001/task/delete?' + data, {
                     method: 'POST'
                 }).then((res) => res.json()).then((res) => {
                     if (res.check === true) {
@@ -196,7 +196,7 @@ const TodoWithAccount = ({ theme, toggleTheme }) => {
                 var data = new URLSearchParams();
                 data.append('apitoken', localStorage.getItem('apitoken'));
                 data.append('id', id);
-                fetch('http://localhost:3000/task/status?' + data, {
+                fetch('http://localhost:3001/task/status?' + data, {
                     method: 'POST',
                 }).then((res) => res.json()).then((res) => {
                     if (res.check === true) {
@@ -226,7 +226,7 @@ const TodoWithAccount = ({ theme, toggleTheme }) => {
             if (result.isConfirmed) {
                 var data = new URLSearchParams();
                 data.append('apitoken', localStorage.getItem('apitoken'));
-                fetch('http://localhost:3000/task/deleteall?' + data, {
+                fetch('http://localhost:3001/task/deleteall?' + data, {
                     method: 'POST'
                 }).then((res) => res.json()).then((res) => {
                     if (res.check === true) {
@@ -246,7 +246,7 @@ const TodoWithAccount = ({ theme, toggleTheme }) => {
         });
     };
     const changepage = (isCompleted) => {
-        fetch('http://localhost:3000/task?apitoken=' + localStorage.getItem('apitoken'))
+        fetch('http://localhost:3001/task?apitoken=' + localStorage.getItem('apitoken'))
             .then((res) => res.json()).then((res) => {
                 switch (isCompleted) {
                     case 0:

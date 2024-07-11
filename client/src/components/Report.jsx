@@ -5,7 +5,7 @@ import { Card, Col, Row } from 'react-bootstrap';
 const Report = ({ theme }) => {
     const [todos, setTodos] = useState([]);
     const getTodo = () => {
-        fetch('http://localhost:3000/task/stat?apitoken=' + localStorage.getItem('apitoken'))
+        fetch('http://localhost:3001/task/stat?apitoken=' + localStorage.getItem('apitoken'))
             .then((res) => res.json()).then((res) => {
                 setTodos(res.result);
             });

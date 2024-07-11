@@ -46,7 +46,7 @@ const FormRegister = () => {
     var data = new URLSearchParams();
     data.append("username", username);
     data.append("userpassword", password);
-    fetch("http://localhost:3000/user/register?" + data, {
+    fetch("http://localhost:3001/user/register?" + data, {
       method: "POST",
     })
       .then((res) => res.json())
